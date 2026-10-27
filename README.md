@@ -6,6 +6,34 @@ RealCost adalah kalkulator *opportunity cost*: ia menunjukkan berapa nilai sebua
 
 Gratis, tanpa daftar, dan semua hitungan berjalan di browser.
 
+## Kenapa saya membuat ini
+
+Jujur, saya sendiri sering tidak berpikir soal harga yang sebenarnya. Saat membeli sesuatu, yang saya lihat hanya angka di label: Rp 20 juta untuk HP, Rp 30 ribu untuk segelas kopi. Kelihatannya sederhana, bayar lalu selesai.
+
+Tapi uang itu sebenarnya bisa tumbuh kalau tidak dibelanjakan. Rp 20 juta yang disimpan di deposito selama 20 tahun bisa jadi sekitar Rp 43,8 juta. Kopi Rp 30 ribu setiap hari, kalau disisihkan, bisa jadi sekitar Rp 327 juta dalam 20 tahun. Angka-angka itu tidak pernah tercetak di label harga, jadi wajar kalau kita tidak memikirkannya.
+
+Saya rasa bukan cuma saya yang begitu. Kemungkinan besar banyak orang juga tidak sadar berapa harga asli yang mereka bayar. Karena itu saya membuat RealCost: supaya siapa pun bisa melihat harga sebenarnya dalam beberapa detik sebelum memutuskan membeli.
+
+Tujuannya bukan melarang belanja atau membuat orang merasa bersalah. Uang memang untuk dipakai. RealCost hanya membantu supaya setiap pilihan dibuat dengan sadar.
+
+## Apa itu opportunity cost?
+
+*Opportunity cost* (biaya peluang) adalah nilai dari pilihan terbaik yang kamu lepaskan saat memilih sesuatu. Setiap keputusan punya "harga tersembunyi" berupa hal lain yang tidak jadi kamu dapatkan.
+
+Dalam urusan uang, saat kamu membelanjakan Rp 20 juta untuk sebuah HP, yang kamu lepaskan bukan cuma Rp 20 juta itu. Kamu juga melepas semua pertumbuhan yang bisa dihasilkan uang tersebut kalau diinvestasikan. Selisih itulah opportunity cost-nya.
+
+| Pilihan                         | Hari ini   | 20 tahun lagi\*   |
+| ------------------------------- | ---------- | ----------------- |
+| Beli HP                         | Rp 20 jt   | HP lama, nilainya hampir nol |
+| Simpan di deposito              | Rp 20 jt   | sekitar Rp 43,8 jt |
+
+\* Deposito 5% per tahun, pajak bunga 20%, bunga diinvestasikan lagi.
+
+RealCost menampilkan opportunity cost dalam dua angka:
+
+- **Nominal**: jumlah rupiah di masa depan kalau uangnya diinvestasikan.
+- **Riil**: nilai nominal itu setelah dikoreksi inflasi, alias berapa daya belinya kalau diukur dengan uang hari ini. Ini angka yang paling jujur untuk dibandingkan dengan isi dompetmu sekarang.
+
 ## Fitur
 
 - **Nominal dan riil**: nilai di masa depan, dan daya belinya dalam uang hari ini setelah inflasi.
