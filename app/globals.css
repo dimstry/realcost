@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/* Neubrutalism: border hitam 2.5px, bayangan kotak keras, warna cerah polos. Sengaja satu tema terang. */
+@theme {
+  --color-ink: #111111;
+  --color-cream: #fff6dc;
+  --color-paper: #fffdf5;
+  --color-yellow: #ffd23f;
+  --color-pink: #ff8fd6;
+  --color-mint: #74f2b5;
+  --color-blue: #9bbcff;
+  --color-orange: #ff9f5a;
+  /* merah untuk isian; teks merah pakai red-text supaya kontras ≥ 4.5:1 di putih dan mint */
+  --color-red: #e8362a;
+  --color-red-text: #b3261e;
+  --color-muted: #55524a;
+  --color-soft: #2b2a26;
+  --color-line: #c9c3b3;
+  --color-accent: #3d5afe;
+  --color-grow: #0f9d58;
+
+  --font-sans: var(--font-lexend), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-dm-mono), ui-monospace, Menlo, monospace;
+
+  --shadow-hard: 4px 4px 0 #111;
+  --shadow-hard-sm: 3px 3px 0 #111;
+  --shadow-hard-xs: 2px 2px 0 #111;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+}
+
+@utility border-brut {
+  border: 2.5px solid var(--color-ink);
+}
+
+@utility lift {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hard-sm);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  body {
+    background-color: var(--color-cream);
+    background-image: radial-gradient(#e7dcbc 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+  button {
+    cursor: pointer;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+/* slider tahun */
+input[type="range"].brut {
+  appearance: none;
+  background: transparent;
+  height: 26px;
+}
+input[type="range"].brut::-webkit-slider-runnable-track {
+  height: 12px;
+  border-radius: 999px;
+  border: 2px solid #111;
+  background: linear-gradient(90deg, #111 var(--p, 66%), #fff var(--p, 66%));
+}
+input[type="range"].brut::-moz-range-track {
+  height: 8px;
+  border-radius: 999px;
+  border: 2px solid #111;
+  background: #fff;
+}
+input[type="range"].brut::-moz-range-progress {
+  height: 8px;
+  border-radius: 999px;
+  background: #111;
+}
+input[type="range"].brut::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background: var(--color-pink);
+  border: 2.5px solid #111;
+  margin-top: -8px;
+  box-shadow: 2px 2px 0 #111;
+}
+input[type="range"].brut::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 7px;
+  background: var(--color-pink);
+  border: 2.5px solid #111;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
